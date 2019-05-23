@@ -1,63 +1,677 @@
 <!-- https://github.hubspot.com/sortable/ -->
 <script src="js/sortable.min.js"></script>
 <p><link rel="stylesheet" href="css/sortable-theme-bootstrap.css" /></p>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128364527-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128364527-3');
+</script>
 <h1 id="model-compression">Model Compression</h1>
-<h2 id="review">Review</h2>
+<p>This is a collection for model compression and acceleartion for DNNs, with a bias towards to the CV domain.</p>
+<h2 id="existing-collections">Existing collections</h2>
+<h3 id="repo">Repo</h3>
+<ul>
+<li><a href="https://github.com/dkozlov/awesome-knowledge-distillation">Knowledge Distillation</a></li>
+</ul>
+<h3 id="survey-paper">Survey paper</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/1802.00939.pdf">Recent Advances in Efficient Computation of Deep Convolutional Neural Networks</a></li>
+</ul>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><a href="https://pocketflow.github.io">PocketFlow</a></li>
+<li><a href="https://nervanasystems.github.io/distiller/">Distiller</a></li>
+<li><a href="https://www.tensorflow.org/lite">Tensorflow Lite</a></li>
+<li><a href="https://www.tensorflow.org/model_optimization">Tensorflow Model Optimization</a></li>
+<li><a href="https://tvm.ai/">TVM</a></li>
+</ul>
 <h2 id="literature-summry">Literature Summry</h2>
 <p>List:</p>
 <table class="sortable-theme-bootstrap" data-sortable>
-<colgroup>
-<col style="width: 2%" />
-<col style="width: 34%" />
-<col style="width: 34%" />
-<col style="width: 14%" />
-<col style="width: 3%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 2%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th>Year</th>
-<th>Author</th>
-<th>Title</th>
-<th>Venue</th>
-<th>Pruning</th>
-<th>Distillation</th>
-<th>Architecture</th>
-<th>Other</th>
+<th style="text-align: right;">Year</th>
+<th style="text-align: left;">Author</th>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">Venue</th>
+<th style="text-align: left;">Pruning</th>
+<th style="text-align: left;">Distillation</th>
+<th style="text-align: left;">Architecture</th>
+<th style="text-align: left;">Quantization, low-rank, etc.</th>
+<th style="text-align: left;">Other</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1990</td>
-<td>Yann Le Cun, John S. Denker, Sara A. Solla</td>
-<td><a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a></td>
-<td>NIPS</td>
-<td>x</td>
-<td></td>
-<td></td>
-<td></td>
+<td style="text-align: right;">1990</td>
+<td style="text-align: left;">Yann Le Cun, John S. Denker, Sara A. Solla</td>
+<td style="text-align: left;"><a href="http://yann.lecun.com/exdb/publis/pdf/lecun-90b.pdf">Optimal Brain Damage</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td>2017</td>
-<td>Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam</td>
-<td><a href="https://arxiv.org/abs/1704.04861">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a></td>
-<td>arxiv</td>
-<td></td>
-<td></td>
-<td>x</td>
-<td></td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Andrew G. Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco Andreetto, Hartwig Adam</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1704.04861">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a></td>
+<td style="text-align: left;">arxiv</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td>1993</td>
-<td>Babak Hassibi, David.G. Stork, Gregory J. Wolff</td>
-<td><a href="nan">Optimal Brain Surgeon and General Network Pruning</a></td>
-<td>IEEE international conference on neural networks</td>
-<td>x</td>
-<td></td>
-<td></td>
-<td></td>
+<td style="text-align: right;">1993</td>
+<td style="text-align: left;">Babak Hassibi, David.G. Stork, Gregory J. Wolff</td>
+<td style="text-align: left;"><a href="https://authors.library.caltech.edu/54981/1/Optimal%20Brain%20Surgeon%20and%20general%20network%20pruning.pdf">Optimal Brain Surgeon and General Network Pruning</a></td>
+<td style="text-align: left;">IEEE international conference on neural networks</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2014</td>
+<td style="text-align: left;">Geoffrey Hinton, Oriol Vinyals, Jeff Dean</td>
+<td style="text-align: left;"><a href="https://www.cs.toronto.edu/~hinton/absps/distillation.pdf">Distilling the knowledge in a neural network</a></td>
+<td style="text-align: left;">NIPS (workshop)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2014</td>
+<td style="text-align: left;">Jimmy Ba, Rich Caruana</td>
+<td style="text-align: left;"><a href="http://papers.nips.cc/paper/5484-do-deep-nets-really-need-to-be-deep">Do deep nets really need to be deep?</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2015</td>
+<td style="text-align: left;">Song Han, Jeff Pool, John Tran, William Dally</td>
+<td style="text-align: left;"><a href="http://papers.nips.cc/paper/5784-learning-both-weights-and-connections-for-efficient-neural-network">Learning both Weights and Connections for Efficient Neural Networks</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2015</td>
+<td style="text-align: left;">Suraj Srinivas, R. Venkatesh Babu</td>
+<td style="text-align: left;"><a href="http://www.bmva.org/bmvc/2015/papers/paper031/paper031.pdf">Data-free Parameter Pruning for Deep Neural Networks</a></td>
+<td style="text-align: left;">BMVC</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2015</td>
+<td style="text-align: left;">Adriana Romero, Nicolas Ballas, Samira Ebrahimi Kahou, Antoine Chassang, Carlo Gatta, Yoshua Bengio</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1412.6550">FitNets: Hints for Thin Deep Nets</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Vadim Lebedev, Victor Lempitsky</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_cvpr_2016/html/Lebedev_Fast_ConvNets_Using_CVPR_2016_paper.html">Fast ConvNets Using Group-Wise Brain Damage</a></td>
+<td style="text-align: left;">CVPR</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Wei Wen, Chunpeng Wu, Yandan Wang, Yiran Chen, Hai Li</td>
+<td style="text-align: left;"><a href="http://papers.nips.cc/paper/6503-learning-structured-sparsity-in-deep-neural-networks">Learning Structured Sparsity in Deep Neural Networks</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Yiwen Guo, Anbang Yao, Yurong Chen</td>
+<td style="text-align: left;"><a href="http://papers.nips.cc/paper/6165-dynamic-network-surgery-for-efficient-dnns">Dynamic Network Surgery for Efficient DNNs</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Hao Zhou, Jose M. Alvarez, Fatih Porikli</td>
+<td style="text-align: left;"><a href="http://users.umiacs.umd.edu/~hzhou/paper/zhou_ECCV2016.pdf">Less is More: Towards Compact CNNs</a></td>
+<td style="text-align: left;">ECCV</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Hengyuan Hu, Rui Peng, Yu-Wing Tai, Chi-Keung Tang</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1607.03250">Network Trimming: A Data-Driven Neuron Pruning Approach towards Efficient Deep Architectures</a></td>
+<td style="text-align: left;">arxiv</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Yoon Kim, Alexander M. Rush</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1606.07947">Sequence-Level Knowledge Distillation</a></td>
+<td style="text-align: left;">EMNLP</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Ping Luo, Zhenyao Zhu, Ziwei Liu, Xiaogang Wang, Xiaoou Tang</td>
+<td style="text-align: left;"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/11977/12130">Face Model Compression by Distilling Knowledge from Neurons</a></td>
+<td style="text-align: left;">AAAI</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Patrick McClure, Nikolaus Kriegeskorte</td>
+<td style="text-align: left;"><a href="https://www.frontiersin.org/articles/10.3389/fncom.2016.00131/full">Representational Distance Learning for Deep Neural Networks</a></td>
+<td style="text-align: left;">Frontiers in Computational Neuroscience</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Saurabh Gupta, Judy Hoffman, Jitendra Malik</td>
+<td style="text-align: left;"><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Gupta_Cross_Modal_Distillation_CVPR_2016_paper.html">Cross Modal Distillation for Supervision Transfer</a></td>
+<td style="text-align: left;">CVPR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Hao Li, Asim Kadav, Igor Durdanovic, Hanan Samet, Hans Peter Graf</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=rJqFGTslg">Pruning Filters for Efficient ConvNets</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Pavlo Molchanov, Stephen Tyree, Tero Karras, Timo Aila, Jan Kautz</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=SJGCiw5gl&amp;noteId=SJGCiw5gl">Pruning Convolutional Neural Networks for Resource Efficient Inference</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Jian-Hao Luo, Jianxin Wu, Weiyao Lin</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/Luo_ThiNet_A_Filter_ICCV_2017_paper.html">ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression</a></td>
+<td style="text-align: left;">ICCV</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Jian-Hao Luo, Jianxin Wu</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1706.05791">An Entropy-based Pruning Method for CNN Compression</a></td>
+<td style="text-align: left;">arxiv</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Sajid Anwar, Kyuyeon Hwang, Wonyong Sung</td>
+<td style="text-align: left;"><a href="https://dl.acm.org/citation.cfm?id=3005348">Structured Pruning of Deep Convolutional Neural Networks</a></td>
+<td style="text-align: left;">JETC</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Yihui He, Xiangyu Zhang, Jian Sun</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_iccv_2017/html/He_Channel_Pruning_for_ICCV_2017_paper.html">Channel Pruning for Accelerating Very Deep Neural Networks</a></td>
+<td style="text-align: left;">ICCV</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Zhuang Liu, Jianguo Li, Zhiqiang Shen, Gao Huang, Shoumeng Yan, Changshui Zhang</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_Learning_Efficient_Convolutional_ICCV_2017_paper.pdf">Learning Efficient Convolutional Networks Through Network Slimming</a></td>
+<td style="text-align: left;">ICCV</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Frederick Tung, Srikanth Muralidharan, Greg Mori</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1707.09102">Fine-Pruning: Joint Fine-Tuning and Compression of a Convolutional Network with Bayesian Optimization</a></td>
+<td style="text-align: left;">BMVC</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Guobin Chen, Wongun Choi, Xiang Yu, Tony Han, Manmohan Chandraker</td>
+<td style="text-align: left;"><a href="https://papers.nips.cc/paper/6676-learning-efficient-object-detection-models-with-knowledge-distillation.pdf">Learning Efficient Object Detection Models with Knowledge Distillation</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Raphael Gontijo Lopes, Stefano Fenu, Thad Starner</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1710.07535">Data-Free Knowledge Distillation for Deep Neural Networks</a></td>
+<td style="text-align: left;">NIPS (workshop)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Sergey Zagoruyko, Nikos Komodakis</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=Sks9_ajex">Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Junho Yim, Donggyu Joo, Jihoon Bae, Junmo Kim</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Yim_A_Gift_From_CVPR_2017_paper.html">A Gift From Knowledge Distillation: Fast Optimization, Network Minimization and Transfer Learning</a></td>
+<td style="text-align: left;">CVPR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Shan You, Chang Xu, Chao Xu, Dacheng Tao</td>
+<td style="text-align: left;"><a href="https://dl.acm.org/citation.cfm?id=3098135">Learning from Multiple Teacher Networks</a></td>
+<td style="text-align: left;">KDD</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">Jose M. Alvarez, Mathieu Salzmann</td>
+<td style="text-align: left;"><a href="https://dl.acm.org/citation.cfm?id=3294853">Compression-aware Training of Deep Networks</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Gao Huang, Shichen Liu, Laurens van der Maaten, Kilian Q. Weinberger</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_cvpr_2018/html/Huang_CondenseNet_An_Efficient_CVPR_2018_paper.html">CondenseNet: An Efficient DenseNet Using Learned Group Convolutions</a></td>
+<td style="text-align: left;">CVPR</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Yang He, Guoliang Kang, Xuanyi Dong, Yanwei Fu, Yi Yang</td>
+<td style="text-align: left;"><a href="https://dl.acm.org/citation.cfm?id=3304970">Soft Filter Pruning for Accelerating Deep Convolutional Neural Networks</a></td>
+<td style="text-align: left;">IJCAI</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Zehao Huang, Naiyan Wang</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Zehao_Huang_Data-Driven_Sparse_Structure_ECCV_2018_paper.html">Data-Driven Sparse Structure Selection for Deep Neural Networks</a></td>
+<td style="text-align: left;">ECCV</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Michael H. Zhu, Suyog Gupta</td>
+<td style="text-align: left;"><a href="https://openreview.net/pdf?id=Sy1iIDkPM">To Prune, or Not to Prune: Exploring the Efficacy of Pruning for Model Compression</a></td>
+<td style="text-align: left;">ICLR (workshop)</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Qiangui Huang, Kevin Zhou, Suya You, Ulrich Neumann</td>
+<td style="text-align: left;"><a href="https://ieeexplore.ieee.org/abstract/document/8354187/">Learning to Prune Filters in Convolutional Neural Networks</a></td>
+<td style="text-align: left;">WACV</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Yihui He, Ji Lin, Zhijian Liu, Hanrui Wang, Li-Jia Li, Song Han</td>
+<td style="text-align: left;"><a href="http://openaccess.thecvf.com/content_ECCV_2018/html/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.html">AMC: AutoML for Model Compression and Acceleration on Mobile Devices</a></td>
+<td style="text-align: left;">ECCV</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Zhuangwei Zhuang, Mingkui Tan, Bohan Zhuang, Jing Liu, Yong Guo, Qingyao Wu, Junzhou Huang, Jinhui Zhu</td>
+<td style="text-align: left;"><a href="http://papers.nips.cc/paper/7367-discrimination-aware-channel-pruning-for-deep-neural-networks">Discrimination-aware Channel Pruning for Deep Neural Networks</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Elliot J. Crowley, Gavin Gray, Amos J. Storkey</td>
+<td style="text-align: left;"><a href="http://papers.nips.cc/paper/7553-moonshine-distilling-with-cheap-convolutions">Moonshine: Distilling with Cheap Convolutions</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Zheng Xu, Yen-Chang Hsu, Jiawei Huang</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=BJbtuRRLM">Training Shallow and Thin Networks for Acceleration via Knowledge Distillation with Conditional Adversarial Networks</a></td>
+<td style="text-align: left;">ICLR (workshop)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Guorui Zhou, Ying Fan, Runpeng Cui, Weijie Bian, Xiaoqiang Zhu, Kun Gai</td>
+<td style="text-align: left;"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewPaper/16090">Rocket Launching: A Universal and Efficient Framework for Training Well-performing Light Net</a></td>
+<td style="text-align: left;">AAAI</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Yuntao Chen, Naiyan Wang, Zhaoxiang Zhang</td>
+<td style="text-align: left;"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewPaper/17147">DarkRank: Accelerating Deep Metric Learning via Cross Sample Similarities Transfer</a></td>
+<td style="text-align: left;">AAAI</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Xiaojie Wang, Rui Zhang, Yu Sun, Jianzhong Qi</td>
+<td style="text-align: left;"><a href="https://papers.nips.cc/paper/7358-kdgan-knowledge-distillation-with-generative-adversarial-networks">KDGAN: Knowledge Distillation with Generative Adversarial Networks</a></td>
+<td style="text-align: left;">NIPS</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">Anubhav Ashok, Nicholas Rhinehart, Fares Beainy, Kris M. Kitani</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=B1hcZZ-AW&amp;noteId=B1hcZZ-AW">N2N learning: Network to Network Compression via Policy Gradient Reinforcement Learning</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Han Cai, Ligeng Zhu, Song Han</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=HylVB3AqYm">ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Zhuang Liu, Mingjie Sun, Tinghui Zhou, Gao Huang, Trevor Darrell</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=rJlnB3C5Ym">Rethinking the Value of Network Pruning</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Jonathan Frankle, Michael Carbin</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=rJl-b3RcF7">The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Shengcao Cao, Xiaofang Wang, Kris M. Kitani</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=S1xLN3C9YX">Learnable Embedding Space for Efficient Neural Architecture Compression</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">x</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2016</td>
+<td style="text-align: left;">Mohammad Rastegari, Vicente Ordonez, Joseph Redmon, Ali Farhadi</td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1603.05279">XNOR-Net: ImageNet Classification Using Binary Convolutional Neural Networks</a></td>
+<td style="text-align: left;">ECCV</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Haichuan Yang, Yuhao Zhu, Ji Liu</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=BylBr3C9K7">Energy-Constrained Compression for Deep Neural Networks via Weighted Sparse Projection and Layer Input Masking</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Cenk Baykal, Lucas Liebenwein, Igor Gilitschenski, Dan Feldman, Daniela Rus</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=HJfwJ2A5KX">Data-Dependent Coresets for Compressing Neural Networks with Applications to Generalization Bounds</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Daehyun Ahn, Dongsoo Lee, Taesu Kim, Jae-Joon Kim</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=HkfYOoCcYX">Double Viterbi: Weight Encoding for High Compression Ratio and Fast On-Chip Reconstruction for Deep Neural Network</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Ivan Chelombiev, Conor Houghton, Cian O’Donnell</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=SkeZisA5t7">Adaptive Estimators Show Information Compression in Deep Neural Networks</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Jooyoung Lee, Seunghyun Cho, Seung-Kwon Beack</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=HyxKIiAqYQ">Context-adaptive Entropy Model for End-to-end Optimized Image Compression</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Xitong Gao, Yiren Zhao, Łukasz Dudziak, Robert Mullins, Cheng-zhong Xu</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=BJxh2j0qYm">Dynamic Channel Pruning: Feature Boosting and Suppression</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Namhoon Lee, Thalaiyasingam Ajanthan, Philip Torr</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=B1VZqjAcYX">SNIP: Single-shot Network Pruning based on Connection Sensitivity</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2019</td>
+<td style="text-align: left;">Chun-Fu (Richard) Chen, Quanfu Fan, Neil Mallinar, Tom Sercu, Rogerio Feris</td>
+<td style="text-align: left;"><a href="https://openreview.net/forum?id=HJMHpjC9Ym">Big-Little Net: An Efficient Multi-Scale Feature Representation for Visual and Speech Recognition</a></td>
+<td style="text-align: left;">ICLR</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
