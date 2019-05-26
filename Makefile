@@ -5,7 +5,7 @@ all: download html
 
 
 download:
-	wget "${SPREADSHEET}"/export?format=csv -O output.csv
+	wget ${SPREADSHEET}/export?format=csv -O output.csv
 
 
 
