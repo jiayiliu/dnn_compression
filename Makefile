@@ -10,11 +10,8 @@ endif
 
 all: download html
 
-
-download: check-env
-	wget "${SPREADSHEET}"/export?format=csv -O output.csv
-
-
+download:
+	wget ${SPREADSHEET}/export?format=csv -O output.csv
 
 html: header.md
 	python3 convert.py
