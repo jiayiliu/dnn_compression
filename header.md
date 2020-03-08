@@ -22,11 +22,11 @@ This is a collection for model compression and acceleartion for DNNs, with a bia
 ### Repo
 
 + [Knowledge Distillation](https://github.com/dkozlov/awesome-knowledge-distillation)
-
-
++ [Model Compression Acceleration](https://github.com/jnjaby/Model-Compression-Acceleration)
 ### Survey paper
 
 + [Recent Advances in Efficient Computation of Deep Convolutional Neural Networks](https://arxiv.org/pdf/1802.00939.pdf)
++ [A Survey on Methods and Theories of Quantized Neural Networks](https://arxiv.org/pdf/1808.04752.pdf)
 
 
 ## Tools
