@@ -10,7 +10,7 @@ endif
 
 all: download html
 
-download:
+download: check-env
 	wget ${SPREADSHEET}/export?format=csv -O output.csv
 
 html: header.md
